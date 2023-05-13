@@ -1,0 +1,69 @@
+<div>
+    <h1>coren의 task별 수행 능력
+    </h1>
+    <p></p>
+    <div>
+      <B>작업 단위</B>
+      <input type="button" value="task1">
+      <input type="button" value="task2">
+      <input type="button" value="task3">
+      <input type="button" value="task4">
+      <input type="button" value="task5">
+    </div>
+    <div>
+      <B>코어 단위</B>
+      <input type="button" value="core1">
+      <input type="button" value="core2">
+      <input type="button" value="core3">
+      <input type="button" value="core4">
+      <input type="button" value="core5">
+    </div>
+    <canvas id="myChart"></canvas>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['task1', 'task2', 'task3', 'task4', 'task5',],
+            datasets: [{
+                data: ["{{data[0][0]}}", 114, 106, 106, 107],
+                label: "Max",
+                borderColor: "#3e95cd:",
+                fill: false
+            }, {
+                data: [282, 350, 411, 502, 635],
+                label: "Min",
+                borderColor: "#8e5ea2",
+                fill: false
+            },{
+                data: [326, 975, 284, 3958, 395],
+                label: "Avg",
+                borderColor: "#c45850",
+                fill: false
+            },{
+                data: [88, 135, 926, 872, 327],
+                label: "Standard",
+                borderColor: "#3cba9f",
+                fill: false
+            },{
+                data: [293,248, 2685, 3692, 1846],
+                label: "Median",
+                borderColor: "#e8c3b9",
+                fill: false
+            }
+         ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'World population per region (in millions)'
+            }
+        }
+    });
+</script>
