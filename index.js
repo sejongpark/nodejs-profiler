@@ -26,7 +26,7 @@ process.on('SIGINT', () => {
 
 // MySQL connection 설정
 const connection = mysql.createConnection(
-    {host: 'localhost', user: 'root', password: '0000', database: 'my_database'}
+    {host: 'localhost', user: 'root', password: '', database: ''}
 );
 
 // 파일 업로드를 위한 multer 설정
